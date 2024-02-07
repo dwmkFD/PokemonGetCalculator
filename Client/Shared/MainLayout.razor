@@ -23,6 +23,19 @@
                             }
                         </MudSelect>
                     </MudItem>
+
+                    <MudItem lg="3">
+                        <CalcResult Title="捕獲パワーなし" OnStatusChangeEventCallback="@((x) => CalcProbability())"></CalcResult>
+                    </MudItem>
+                    <MudItem lg="3">
+                        <CalcResult Title="捕獲パワーLv1" OnStatusChangeEventCallback="@((x) => CalcProbability())"></CalcResult>
+                    </MudItem>
+                    <MudItem lg="3">
+                        <CalcResult Title="捕獲パワーLv2" OnStatusChangeEventCallback="@((x) => CalcProbability())"></CalcResult>
+                    </MudItem>
+                    <MudItem lg="3">
+                        <CalcResult Title="捕獲パワーLv3" OnStatusChangeEventCallback="@((x) => CalcProbability())"></CalcResult>
+                    </MudItem>
                 </MudGrid>
                 @Body
             </MudMainContent>
@@ -59,6 +72,10 @@
     private void OnBallSelected(string ball)
     {
         BallName = ball;
+    }
+
+    private void CalcProbability()
+    {
     }
 
     private List<string> trans_katakana(string in_str)
